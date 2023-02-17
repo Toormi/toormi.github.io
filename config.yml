@@ -1,4 +1,40 @@
 baseURL: https://toormi.github.io
 languageCode: en-us
-title: My New Hugo Site
+title: Toormi's learning note
 theme: 'PaperMod'
+env: production
+
+params:
+    assets:
+    author: ["Toormi"]
+    comments: true
+    ShowReadingTime: true
+    ShowShareButtons: true
+    ShowBreadCrumbs: true
+    # ShowPostNavLinks: true
+    ShowCodeCopyButtons: true
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archives/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
